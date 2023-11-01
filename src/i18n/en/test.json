@@ -1,0 +1,5 @@
+{
+  "HELLO": "Hello",
+  "NOT_FOUND": "Not found User For this id",
+  "EMAIL_NOT_FORMATTED": "Email is not formatted correctly"
+}
