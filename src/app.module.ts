@@ -15,7 +15,7 @@ import { CustomI18nService } from './custom-i18n.service';
   imports: [
     ConfigModule.forRoot(),
     I18nModule.forRoot({
-      fallbackLanguage: 'ar',
+      fallbackLanguage: 'en',
       loaderOptions: {
         path: path.join(__dirname, '/i18n/'),
         watch: true,

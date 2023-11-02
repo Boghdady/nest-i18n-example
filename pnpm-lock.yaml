@@ -35,6 +35,9 @@ dependencies:
   mongoose:
     specifier: ^7.6.1
     version: 7.6.1
+  mongoose-i18n-localize:
+    specifier: ^0.3.0
+    version: 0.3.0
   nestjs-i18n:
     specifier: ^10.3.7
     version: 10.3.7(@nestjs/common@9.0.0)(@nestjs/core@9.0.0)(class-validator@0.13.2)(rxjs@7.2.0)
@@ -3859,6 +3862,10 @@ packages:
       socks: 2.7.1
     optionalDependencies:
       '@mongodb-js/saslprep': 1.1.1
+    dev: false
+
+  /mongoose-i18n-localize@0.3.0:
+    resolution: {integrity: sha512-1imPY6AQ2lT9FIy+V7cm3RByFdRveuWyvFMBDsAWK3/UICUfYdA1X/zwESvAlpfem+N2dM0XyCcQS0Logz+CDQ==}
     dev: false
 
   /mongoose@7.6.1:

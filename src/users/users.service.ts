@@ -5,7 +5,7 @@ import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { User } from './schemas/user.schema';
 import { MongoIdDto } from './dtos/mongo-id.dto';
-import { I18nContext, I18nService } from 'nestjs-i18n';
+import { I18nContext } from 'nestjs-i18n';
 import { CustomI18nService } from '../custom-i18n.service';
 
 @Injectable()
@@ -17,7 +17,11 @@ export class UserService {
 
   async findUsers(): Promise<User[]> {
     const users = await this.userModel.find();
-    return users;
+    const localizedUsers = this.userModel.schema.methods.toObjectLocalizedOnly(
+      users,
+      I18nContext.current().lang,
+    );
+    return localizedUsers;
   }
 
   async findUserById(id: MongoIdDto): Promise<User> {

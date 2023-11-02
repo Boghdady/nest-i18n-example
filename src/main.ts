@@ -8,7 +8,13 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
   // To use nestjs-i18n in your DTO validation.json
-  app.useGlobalPipes(new I18nValidationPipe({ whitelist: true }));
+  app.useGlobalPipes(
+    new I18nValidationPipe({
+      whitelist: true,
+      transform: true,
+      forbidNonWhitelisted: true,
+    }),
+  );
 
   // To translate the class-validator errors
   app.useGlobalFilters(
